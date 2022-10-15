@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const https = require("https");
 app.get("/", function(req, response){
-    const url ="https://api.openweathermap.org/data/2.5/weather?q=Alwar,In&appid=158bf4aad8af166eb7df6b5285c91226&units=metric"
+    const url ="https://api.openweathermap.org/data/2.5/weather?q=Alwar,In&appid=&units=metric"
     https.get(url,function(res){
         console.log(res.statusCode,res.statusMessage);
         res.on("data",function(data){
